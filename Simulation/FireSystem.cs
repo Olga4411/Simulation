@@ -52,6 +52,7 @@ namespace Simulation
             Random random = new Random(DateTime.Now.Millisecond);
             if (random.Next(1, 5) == 3)
             {
+                makeFalseAlarm();
                 // Ложное срабатывание
                 return true;
             }
