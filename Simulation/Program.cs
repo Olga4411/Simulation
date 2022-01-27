@@ -26,12 +26,18 @@ namespace Simulation
             //3/2 подключаем учеников
             foreach(Student student in students)
             FireSystem.alarm += student.Evacuation;
-            // 4.симитируем пожар
+            // 4.симилируем пожар
             while (FireSystem.checkSmokeLevel()==false)
             {
                 Console.WriteLine($"Все нормально, дыма нет");
             }
             Console.WriteLine("Случился пож-р");
+            //5. симилируем ложное
+            while (FireSystem.checkSmokeLevel() == false)
+            {
+                Console.WriteLine($"Ай ай горим");
+            }
+            Console.WriteLine("Фуу  ложное срабатывание");
         }
         static void Main(string[] args)
         {
@@ -47,7 +53,9 @@ namespace Simulation
             //human = new Student("Петя");
             //Console.WriteLine(human);
             //human.Evacuation();
-            TestFireSystem();
+            //TestFireSystem();
+
+            
             Console.ReadLine();
         }
     }

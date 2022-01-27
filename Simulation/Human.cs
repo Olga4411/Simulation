@@ -18,5 +18,11 @@ namespace Simulation
         }
         // абстрактный метод симуляции эвак-и
         public abstract void Evacuation();
+
+        // Метод симуляции отмены 
+        public void DeclainEvakuation()
+        {
+            Console.WriteLine($"{Name} отменил эвакуацию");
+        }
     }
 }
